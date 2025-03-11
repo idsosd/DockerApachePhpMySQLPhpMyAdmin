@@ -3,7 +3,7 @@
 class dbconnection extends PDO
 {
     private $host = "db";
-    private $dbname = "php-app";
+    private $dbname = "meals";
     private $user = "USER";
     private $pass = "PASS";
     public function __construct()

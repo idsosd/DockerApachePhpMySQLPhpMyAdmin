@@ -1,11 +1,12 @@
 <?php
+echo "<a href='index2.php'>link naar formulier</a>";
 //maak de PDO-connectie beschikbaar in dit bestand
 require "db/dbconnection.class.php";
 //maak een nieuwe connectie aan in de variabele $dbconnect
 $dbconnect = new dbconnection();
 
 //op de volgende regel bouw je een sql-query (leren we in module 10); als je alle producten uit de tabel met de naam ‘product’ wilt trekken heb je de volgende query nodig
-$sql = "SELECT * FROM users ";
+$sql = "SELECT * FROM recipes LEFT JOIN ingredients ON recipes.id = recipe_id ";
 
 //hier zet je de query klaar, ‘prepare()’ is een functie binnen PDO die je kunt gebruiken bij de variabele $dbconnect
 $query = $dbconnect -> prepare($sql);
